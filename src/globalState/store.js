@@ -753,6 +753,64 @@ export const actions = store => ({
 
   },
 
+  storeAddShippingFee: async (state, saleDetailId, destCity) =>{
+
+    // const token = localStorage.getItem("token");
+    const token = state.userCredential.token;
+
+    if (token!==undefined && token!==null && token!==''){
+
+      const req = {
+        method: "post",
+        url: state.APIDomainRoot+`/shipping-address/${saleDetailId}`,
+        headers: {
+          "Content-Type":"application/json",
+          "Authorization":"Bearer "+token
+        },
+        params: {
+        },
+        data: {
+          address: "",
+          district: "",
+          city: destCity,
+          province: "",
+          postal_code: 0
+        },
+      };
+      
+      
+      await axios(req)
+      .then(async response => {
+        console.log("RESPONSE DATA ", response.data);
+        
+        // await store.setState(
+        //   {
+        //     payment:{
+        //       id: response.data.id,
+        //       saleId: response.data.sale_id,
+        //       bankId: response.data.bank_account_id,
+        //       totalToTransfer: response.data.total_to_transfer,
+        //       expiredTime: response.data.expired_time,
+        //       urlProofImg: response.data.urlProofImg,
+        //       isPaid: false
+        //     }
+        //   }
+        // );
+
+      })
+      .catch( (error) => {
+        console.log('Gagal request POST insert new record ke table payment di server ', error);
+      });
+
+
+    
+    }else{
+      alert("Silahkan login terlebih dahulu untuk berbelanja")
+    }
+    
+
+  },
+
 
 });
 
