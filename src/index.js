@@ -4,6 +4,22 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+import 'bootstrap/dist/css/bootstrap.min.css';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+import 'jquery/src/jquery';
+// import $ from 'jquery';
+import 'bootstrap/dist/js/bootstrap';
+
+
+// import "./assets/js/jquery.min.js";
+// import "./assets/js/bootstrap.min.js";
+// import "./assets/js/slick.min.js";
+// import "./assets/js/nouislider.min.js";
+// import "./assets/js/jquery.zoom.min.js";
+// import "./assets/js/main.js";
+
 ReactDOM.render(<App />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change

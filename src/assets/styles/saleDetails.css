@@ -1,0 +1,9 @@
+.sale-detail-row{
+  padding: 30px 0;
+}
+
+.sale-detail-img-container img{
+  width: 300px;
+  height: 300px;
+  align-items: center;
+}

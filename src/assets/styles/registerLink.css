@@ -1,0 +1,19 @@
+.header-register{
+    width: 100px;
+  }
+
+.header-register{
+    font-size: 12px;
+    color: white;
+  }
+
+  .header-register a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .header-register a:hover{
+    color: red;
+    text-decoration: none;
+  }
